@@ -13,4 +13,10 @@ describe("Class StudentService",()=>{
         expect(certification).not.toBeUndefined();
         
     })
+    test("Metodo studentCredits",()=>{
+        const students =[{"name": "Warren","credits": 508},{"name": "Lucinda","credits": 677},{"name": "Fuentes","credits": 210}];
+        const credits = StudentService.studentCredits(students,500)
+        expect(credits).not.toBeUndefined();
+        expect(credits).toEqual([{"name": "Warren","credits": 508},{"name": "Lucinda","credits": 677}])
+    })
 });
