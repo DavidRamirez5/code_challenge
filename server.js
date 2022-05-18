@@ -15,7 +15,12 @@ app.get("/v1/students",(req,res)=>{
 });
 
 app.get("/v1/students/certification",(req,res)=>{
-    res.json(StudentController.getEmailwithCertification())
+    res.json(StudentController.getEmailwithCertification());
+})
+
+app.get("/v1/credits/:credits",(req,res)=>{
+    const credits= req.params.credits;
+    res.json(StudentController.studentCredits(credits))
 })
 app.listen(port,()=>{
     console.log(`App listening on port ${port}`);
