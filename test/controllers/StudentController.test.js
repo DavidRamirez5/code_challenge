@@ -5,4 +5,8 @@ describe("Class StudentController",()=> {
         const Students = StudentController.getStudents();
         expect(Students).not.toBeUndefined();
     });
+    test("1.Metodo getEmailWithCertification",()=>{
+        const haveCertification = StudentController.getEmailwithCertification();
+        expect(haveCertification).not.toBeUndefined();
+    })
 });
