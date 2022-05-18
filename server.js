@@ -14,10 +14,10 @@ app.get("/v1/students",(req,res)=>{
     res.json(students);
 });
 
+app.get("/v1/students/certification",(req,res)=>{
+    res.json(StudentController.getEmailwithCertification())
+})
 app.listen(port,()=>{
     console.log(`App listening on port ${port}`);
 });
 
-// Instrucciones para continuar
-// Logramos culplir el primer requerimiento, aun no se versiona server.js -> correr eslint  -> CI con Github actions antes del requerimiento 2
-//Let's Go.
